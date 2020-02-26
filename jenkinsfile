@@ -1,0 +1,18 @@
+@Library('shlib1')_
+pipeline
+{
+    agent any
+stages{
+    
+     stage('merge_req'){
+        steps{
+            script
+            {
+            def ids=Merge_request_gitlab(jsondata)
+            println(ids)
+            Merge_request_gitlab.commit(ids)
+            }
+         }
+         }     
+}
+}
