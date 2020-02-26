@@ -11,7 +11,7 @@ stages{
             //def ids=Merge_request_gitlab.gitlab(jsondata)
             //println(ids)
            // Merge_request_gitlab.commit(ids)
-            def totalbuild=bamboonobuild.bamboo("http://18.220.143.53:8085")
+            def totalbuild=bamboonobuild.bamboo("http://18.220.143.53:8085",jsondata)
                   echo "${totalbuild}"
                  if(totalbuild!=0)
                  {
