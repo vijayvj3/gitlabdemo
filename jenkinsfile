@@ -6,10 +6,11 @@ stages{
     
      stage('merge_req'){
         steps{
-        def ids= Merge_request_gitlab(jsondata)
-         println(ids)
+        
             script
             {
+            def ids= Merge_request_gitlab(jsondata)
+         println(ids)
            // Merge_request_gitlab(jsondata)
             //println(ids)
           Merge_request_gitlab.commit(ids)
